@@ -19,8 +19,8 @@ $contactJson = json_encode($contactFormInputs);
 echo "<script type='text/javascript'>var contactFormInputs = $contactJson;</script>";
 
 
-$urlHost = "https://static-test.mastercontrol.com";
-$formInitializerUrl = getStaticSiteUrl($urlHost, "/assets/js/marketo/form-app-initializer.min.js");
+$urlHost = "https://static.mastercontrol.com";
+$formInitializerUrl = getStaticSiteUrl($urlHost, "/wp/assets/js/marketo/form-app-initializer.min.js");
 ?>
 
 <script type='text/javascript'>
@@ -50,6 +50,10 @@ $formInitializerUrl = getStaticSiteUrl($urlHost, "/assets/js/marketo/form-app-in
       customData: {
         ctaButtonText: docInputs.buttonText,
         formHeading: docInputs.form_heading
+      },
+      tracking: {
+        usePageOfferId: false,
+        offerId: docInputs.offerId
       },
       lang: docInputs.lang
     });

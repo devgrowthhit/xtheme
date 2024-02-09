@@ -1,7 +1,7 @@
 <?php
 
 function loadQueryStringsFile($urlHost) {
-  $url = $urlHost."/assets/file-hashes.json";
+  $url = $urlHost."/wp/assets/file-hashes.json";
 
   $curl = curl_init($url);
   curl_setopt($curl, CURLOPT_HTTPGET, true);
