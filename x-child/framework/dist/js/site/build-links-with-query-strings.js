@@ -4,23 +4,23 @@ let fileInfo = [
   {
     queueName: "megamenu-js",
     filename: "mcui-megamenu-scripts-v2.js",
-    staticFilePath: "/assets/js/",
+    staticFilePath: "/wp/assets/js/",
     wpFilePath: "/framework/dist/js/site/",
   },{
     queueName: "above-fold-js",
     filename: "wp-abovefold-us.min.js",
-    staticFilePath: "/assets/js/above-fold/",
+    staticFilePath: "/wp/assets/js/above-fold/",
     wpFilePath: "/framework/dist/js/site/",  
   },{
     queueName: "getresourceandform",
     filename: "getresourceandform.js",
-    staticFilePath: "/assets/js/",
+    staticFilePath: "/wp/assets/js/",
     wpFilePath: "/framework/dist/js/site/",
   }
 ]
 
 // Import data from JSON file
-fetch('https://static.mastercontrol.com/assets/file-hashes.json')
+fetch('https://static.mastercontrol.com/wp/assets/file-hashes.json')
 .then((response) => response.json())
 .then((json) => buildQueryStringFiles(json));
 
@@ -28,7 +28,7 @@ fetch('https://static.mastercontrol.com/assets/file-hashes.json')
 function buildQueryStringFiles(fileHashes) {
   fileInfo.forEach(element => {
     let queryString = fileHashes[element.staticFilePath + element.filename];
-    let wpFilePath = 'https://staging.mastercontrol.com/lp/wp-content/themes/x-child'+ element.wpFilePath + element.filename;
+    let wpFilePath = 'https://www.mastercontrol.com/lp/wp-content/themes/x-child'+ element.wpFilePath + element.filename;
     if(queryString) {
       var s = document.createElement("script");
       s.type = "text/javascript";

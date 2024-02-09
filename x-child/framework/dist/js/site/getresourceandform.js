@@ -7,7 +7,7 @@ var docData = null;
 
 function getDocData() {
   return new Promise((resolve, reject) => {
-    jQuery.get('https://staging.mastercontrol.com/customapi/ResourceWidgetData/GetDocumentData/?legacyIds=' + id + '&lang=' + lang)
+    jQuery.get('https://www.mastercontrol.com/customapi/ResourceWidgetData/GetDocumentData/?legacyIds=' + id + '&lang=' + lang)
     .then(data => {
         resolve(data);
       })
