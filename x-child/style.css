@@ -1,0 +1,105 @@
+/*
+
+Theme Name: X – Child Theme
+Theme URI: https://theme.co/x/
+Author: Themeco
+Author URI: https://theme.co/
+Description: Make all of your modifications to X in this child theme.
+Version: 1.0.0
+Template: x
+
+*/
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css");
+@import url("https://static-test.mastercontrol.com/assets/css/mcui-global.min.css?v=4");
+@import url("https://static-test.mastercontrol.com/assets/css/pages/error404.min.css?v=1");
+
+/*
+Import FONTS
+*/
+
+@font-face {
+    font-family: FlamaSemicondensed Medium;
+    font-display: fallback;
+    src: url('https://static.mastercontrol.com/assets/persist/fonts/FlamaSemicondensed-Medium.woff2');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: FlamaSemicondensed Semibold;
+    font-display: fallback;
+    src: url('https://static.mastercontrol.com/assets/persist/fonts/FlamaSemicondensed-Semibold.woff2');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: Flama Book;
+    font-display: fallback;
+    src: url('https://static.mastercontrol.com/assets/persist/fonts/Flama-Book.woff2');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: Flama Basic;
+    font-display: fallback;
+    src: url('https://static.mastercontrol.com/assets/persist/fonts/Flama-Basic.woff2');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: Flama Medium;
+    font-display: fallback;
+    src: url('https://static.mastercontrol.com/assets/persist/fonts/Flama-Medium.woff2');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: Flama Semibold;
+    font-display: fallback;
+    src: url('https://static.mastercontrol.com/assets/persist/fonts/Flama-Semibold.woff2');
+    font-weight: normal;
+  }
+
+/*
+Fix underline in menu links
+*/
+
+body a {
+text-decoration: none;
+}
+
+.hentry:first-child {
+    margin-top: 50px;
+}
+
+.lets-chat-container .phone a {
+color: #fff;
+}
+
+  nav.navigation.utm-url .bar .navContent .left, nav.mainMenu.utm-url .bar .navContent .left {
+    display: none;
+  }
+  nav.navigation.utm-url .bar .navContent .right .search-link, nav.mainMenu.utm-url .bar .navContent .right .search-link, nav.navigation.utm-url .bar .navContent .right .lang, nav.mainMenu.utm-url .bar .navContent .right .lang, nav.navigation.utm-url .bar .navContent .right .login, nav.mainMenu.utm-url .bar .navContent .right .login {
+    display: none;
+  }
+  nav.navigation.utm-url .bar .navContent .right a.login, nav.mainMenu.utm-url .bar .navContent .right a.login {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 15px;
+  }
+  footer.footer.utm-url .site-links {
+    display: none;
+  }
+  @media screen and (min-width: 992px) {
+    nav.navigation.utm-url .bar .navContent .right a.login, nav.mainMenu.utm-url .bar .navContent .right a.login {
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+.hentry:first-child {
+    margin-top: 70px;
+}
+
+
+  }
+  
